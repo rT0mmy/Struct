@@ -43,12 +43,26 @@ Struct(StructName: string)(Data: {}) -> StructObject
 
 ```lua
 Struct "Point" {
-	x = 1,
+  x = 1,
   y = 5
 }
 ```
 
 > Creates a new ```StructObject```
+ 
+ <br><br>
+
+```lua
+StructObject([OPTIONAL] InitProperties: {}) -> StructInstance
+```
+
+```lua
+StructObject{
+  x = 5
+}
+```
+
+> Creates a new ```StructInstance```
  
  <br><br>
 
