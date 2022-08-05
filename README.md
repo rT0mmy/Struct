@@ -62,7 +62,7 @@ StructObject{
 }
 ```
 
-> Creates a new ```StructInstance```
+> Creates a new **pseudo-```StructInstance```**
  
  <br><br>
 
@@ -74,7 +74,7 @@ StructObject:Deconstruct() -> nil
 StructObject:Deconstruct() -- // The struct will be deconstructed (destroyed)
 ```
 
-> Deconstructs the ```StructObject``` and wipes all data, for it to be later collected by the gc.
+> Deconstructs the ```StructObject``` and wipes all data.
 
 
 <br><br><br>
