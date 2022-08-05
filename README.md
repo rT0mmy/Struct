@@ -1,6 +1,6 @@
 <div align="center">
 	<h1>Luau Struct</h1>
-	<p>Fast(er) & Lightweight version of <a href="https://github.com/rT0mmy/class">Event</a> </p>
+	<p>Fast(er) & Lightweight version of <a href="https://github.com/rT0mmy/class">Class</a> </p>
   
   ![Luau](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
   <br><br>
