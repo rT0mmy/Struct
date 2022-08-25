@@ -17,14 +17,14 @@ export type StructObject = typeof(setmetatable({} :: {
 local function new(name:string):({[string]:any})->StructObject
 	return function(properties:{[string]:any}):StructObject
 		local self:{[string]:any} = {
-			Items = {},
+			Properties = {},
 			Name = name,
 
 			onChanged = Event "onChanged",
 		}
 
-		function self:Copy()
-			return new(self.Name)(self.Properties)
+		function self:Copy(properties:{[string]:any})
+			return new(self.Name)(properties or self.Properties)
 		end
 
 		function self:Deconstruct()
@@ -43,6 +43,10 @@ local function new(name:string):({[string]:any})->StructObject
 			__newindex = function(_,k,v)
 				self.Properties[k] = v
 				self.onChanged:Fire(k,v)
+			end,
+
+			__call = function(_,v)
+				return self:Copy(v)
 			end,
 		})
 
